@@ -1,0 +1,49 @@
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); margin-bottom: 12px; }
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 48px;
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+.chart-wrap {
+  background: rgba(22,22,37,0.4);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 8px;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.cat-tab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'JetBrains Mono', monospace;
+
+  &.active, &:hover {
+    background: rgba(99,102,241,0.15);
+    border-color: var(--primary);
+    color: var(--primary-light);
+  }
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

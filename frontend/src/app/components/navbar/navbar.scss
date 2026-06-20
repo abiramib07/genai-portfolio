@@ -1,0 +1,96 @@
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+
+  &.scrolled {
+    background: rgba(10, 10, 18, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  .logo-bracket { color: var(--primary); }
+  .logo-name { color: var(--accent); margin: 0 2px; }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  li a {
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  }
+  .resume-btn {
+    background: rgba(99,102,241,0.12) !important;
+    border: 1px solid rgba(99,102,241,0.35) !important;
+    color: var(--primary-light) !important;
+    border-radius: 20px !important;
+    &:hover { background: rgba(99,102,241,0.22) !important; }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  &.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  &.active span:nth-child(2) { opacity: 0; }
+  &.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(10,10,18,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    gap: 8px;
+    &.open { display: flex; }
+    li { width: 100%; }
+    li a { display: block; width: 100%; text-align: center; }
+  }
+}

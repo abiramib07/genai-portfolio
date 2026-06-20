@@ -1,0 +1,25 @@
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); margin-bottom: 12px; }
+
+.edu-card {
+  display: flex; align-items: center; gap: 28px; padding: 32px 36px; margin-top: 48px;
+  transition: transform 0.3s; max-width: 800px;
+  &:hover { transform: translateY(-4px); }
+  @media (max-width: 600px) { flex-direction: column; text-align: center; padding: 24px 20px; }
+}
+
+.edu-icon {
+  width: 64px; height: 64px; border-radius: 16px; background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.2); display: flex; align-items: center; justify-content: center;
+  color: var(--primary-light); flex-shrink: 0;
+}
+
+.edu-info { flex: 1;
+  h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .institution { color: var(--primary-light); font-weight: 500; font-size: 0.92rem; margin-bottom: 4px; }
+  .period { color: var(--muted); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
+}
+
+.edu-cgpa { text-align: center; flex-shrink: 0;
+  .cgpa-value { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .cgpa-label { font-size: 0.78rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
+}

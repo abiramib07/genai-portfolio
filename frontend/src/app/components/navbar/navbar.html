@@ -1,0 +1,20 @@
+<nav [class.scrolled]="scrolled()">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">AB</span>
+      <span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" [class.open]="menuOpen()">
+      @for (link of links; track link.label) {
+        <li><a (click)="scrollTo(link.href)">{{ link.label }}</a></li>
+      }
+      <li>
+        <a class="resume-btn" href="assets/Abirami_Resume.pdf" target="_blank" download>Resume</a>
+      </li>
+    </ul>
+    <button class="hamburger" (click)="menuOpen.set(!menuOpen())" [class.active]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

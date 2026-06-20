@@ -1,0 +1,24 @@
+<section class="achievements section" id="achievements">
+  <div class="fade-up">
+    <p class="section-label">// impact</p>
+    <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+    <p class="section-subtitle">Measurable outcomes from production AI systems</p>
+  </div>
+
+  <div class="achievements-grid fade-up">
+    @for (a of achievements; track a.metric; let i = $index) {
+      <div class="achievement-card glass-card">
+        <div class="gauge-wrap">
+          @if (gaugeOptions[i]) {
+            <highcharts-chart
+              [Highcharts]="Highcharts"
+              [options]="gaugeOptions[i]"
+              style="width:100%;display:block;">
+            </highcharts-chart>
+          }
+        </div>
+        <p class="achievement-desc">{{ a.description }}</p>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="education section" id="education">
+  <div class="fade-up">
+    <p class="section-label">// education</p>
+    <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
+  </div>
+
+  <div class="edu-card glass-card fade-up">
+    <div class="edu-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+      </svg>
+    </div>
+    <div class="edu-info">
+      <h3>{{ education.degree }}</h3>
+      <p class="institution">{{ education.institution }}</p>
+      <p class="period">{{ education.period }}</p>
+    </div>
+    <div class="edu-cgpa">
+      <div class="cgpa-value gradient-text">{{ education.cgpa }}</div>
+      <div class="cgpa-label">CGPA / 10</div>
+    </div>
+  </div>
+</section>

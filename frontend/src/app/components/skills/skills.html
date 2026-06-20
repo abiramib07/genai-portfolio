@@ -1,0 +1,34 @@
+<section class="skills section" id="skills">
+  <div class="fade-up">
+    <p class="section-label">// expertise</p>
+    <h2 class="section-title">Skills & <span class="gradient-text">Competencies</span></h2>
+    <p class="section-subtitle">7 core domains, built through 2+ years of production AI development</p>
+  </div>
+
+  <div class="skills-layout fade-up">
+    <div class="chart-wrap">
+      <highcharts-chart
+        [Highcharts]="Highcharts"
+        [options]="chartOptions"
+        [update]="updateChart"
+        style="width:100%; display:block;">
+      </highcharts-chart>
+    </div>
+
+    <div class="skills-panel">
+      <div class="category-tabs">
+        @for (cat of categories; track cat) {
+          <button class="cat-tab" [class.active]="activeCategory() === cat" (click)="selectCategory(cat)">
+            {{ cat }}
+          </button>
+        }
+      </div>
+
+      <div class="skill-badges">
+        @for (skill of activeSkills; track skill) {
+          <span class="tech-badge">{{ skill }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

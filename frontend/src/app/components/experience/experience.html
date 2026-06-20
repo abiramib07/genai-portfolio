@@ -1,0 +1,61 @@
+<section class="experience section" id="experience">
+  <div class="fade-up">
+    <p class="section-label">// work history</p>
+    <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+    <p class="section-subtitle">2+ years building production-grade AI systems across two companies</p>
+  </div>
+
+  <div class="timeline">
+    @for (job of experience; track job.company; let i = $index) {
+      <div class="timeline-item fade-up">
+        <div class="timeline-marker">
+          <div class="marker-dot" [class.current]="job.current"></div>
+          @if (!job.current) { <div class="marker-line"></div> }
+        </div>
+
+        <div class="job-card glass-card">
+          <div class="job-header">
+            <div>
+              <h3 class="job-role">{{ job.role }}</h3>
+              <div class="job-meta">
+                <span class="company">{{ job.company }}</span>
+                <span class="divider">·</span>
+                <span class="period">{{ job.period }}</span>
+                @if (job.current) { <span class="current-badge">Current</span> }
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-list">
+            @for (proj of job.projects; track proj.title; let j = $index) {
+              <div class="project-item">
+                <button class="project-toggle" (click)="toggleProject(projectKey(i, j))">
+                  <span class="proj-title">{{ proj.title }}</span>
+                  <svg class="chevron" [class.open]="expandedProject() === projectKey(i, j)"
+                    width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </button>
+
+                @if (expandedProject() === projectKey(i, j)) {
+                  <div class="project-details">
+                    <ul class="highlights">
+                      @for (h of proj.highlights; track h) {
+                        <li>{{ h }}</li>
+                      }
+                    </ul>
+                    <div class="stack-row">
+                      @for (s of proj.stack; track s) {
+                        <span class="tech-badge">{{ s }}</span>
+                      }
+                    </div>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

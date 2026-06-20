@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "99df917c-24e5-41d8-872d-6d62e4a6418f"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -53,6 +54,11 @@
             ],
             "styles": [
               "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/highcharts/highcharts.js",
+              "node_modules/highcharts/highcharts-more.js",
+              "node_modules/highcharts/modules/solid-gauge.js"
             ]
           },
           "configurations": {

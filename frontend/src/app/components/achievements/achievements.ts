@@ -1,13 +1,11 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HighchartsChartComponent } from 'highcharts-angular';
 import * as Highcharts from 'highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
-import * as HighchartsMore from 'highcharts/highcharts-more';
-import * as SolidGauge from 'highcharts/modules/solid-gauge';
 
-(HighchartsMore as any)(Highcharts);
-(SolidGauge as any)(Highcharts);
+// highcharts-more and solid-gauge are loaded as global scripts via angular.json
+// so the global Highcharts object already has these modules initialized
+declare const window: any;
 
 @Component({
   selector: 'app-achievements',
@@ -17,8 +15,8 @@ import * as SolidGauge from 'highcharts/modules/solid-gauge';
 })
 export class AchievementsComponent implements OnChanges {
   @Input() achievements: any[] = [];
-  Highcharts = Highcharts;
-  gaugeOptions: Highcharts.Options[] = [];
+  Highcharts: any = typeof window !== 'undefined' ? window.Highcharts : Highcharts;
+  gaugeOptions: any[] = [];
 
   private metricToNum(val: string): number {
     const n = parseFloat(val.replace('%', '').replace('+', ''));

@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighchartsChartModule } from 'highcharts-angular';
 import * as Highcharts from 'highcharts';
+declare const window: any;
 @Component({
   selector: 'app-skills',
   imports: [CommonModule, HighchartsChartModule],
@@ -11,7 +12,7 @@ import * as Highcharts from 'highcharts';
 export class SkillsComponent implements OnChanges {
   @Input() skills: Record<string, string[]> = {};
 
-  Highcharts = Highcharts;
+  Highcharts: any = typeof window !== 'undefined' ? window.Highcharts : Highcharts;
   activeCategory = signal('');
   categories: string[] = [];
   chartOptions: Highcharts.Options = {};

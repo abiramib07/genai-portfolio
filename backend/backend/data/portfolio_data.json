@@ -1,0 +1,154 @@
+{
+  "personal": {
+    "name": "Abirami B",
+    "title": "Generative AI Developer",
+    "subtitle": "LLM & Agentic AI Specialist",
+    "email": "abiramib20.ai@gmail.com",
+    "phone": "7708872650",
+    "linkedin": "linkedin.com/in/abirami-b-15a042213",
+    "summary": "Generative AI Developer with 2+ years of hands-on experience architecting and deploying production-grade agentic AI systems, RAG-powered chatbots, multi-agent orchestration workflows, and AI analytics platforms. Deep expertise in LangGraph, LangChain, LLM orchestration, vector databases, and scalable Python backends using FastAPI. Proven track record with 85% RAG relevance, 88% forecasting accuracy, and 60% improvement in user adoption.",
+    "location": "India"
+  },
+  "stats": [
+    { "value": "2+", "label": "Years Experience", "icon": "timeline" },
+    { "value": "85%", "label": "RAG Answer Relevance", "icon": "analytics" },
+    { "value": "88%", "label": "Forecasting Accuracy", "icon": "trending_up" },
+    { "value": "60%", "label": "User Adoption Boost", "icon": "groups" }
+  ],
+  "skills": {
+    "Agentic AI & Orchestration": [
+      "LangGraph", "LangChain", "LangSmith", "Multi-Agent Systems",
+      "ReAct Pattern", "Agentic Workflows", "LLM Orchestration",
+      "MCP Protocol", "AutoGen", "Tool Use"
+    ],
+    "LLMs & Generative AI": [
+      "RAG Architecture", "Prompt Engineering", "LLM Fine-tuning (LoRA/QLoRA)",
+      "Transformers", "Claude", "OpenAI GPT-4", "Google Gemini", "NER", "Text Summarization"
+    ],
+    "Vector Stores & Retrieval": [
+      "FAISS", "Pinecone", "ChromaDB", "Semantic Search",
+      "Embedding Generation", "Hybrid Retrieval", "Vector DB Design"
+    ],
+    "AI Frameworks & ML": [
+      "Hugging Face Transformers", "PyTorch", "TensorFlow",
+      "Scikit-learn", "Facebook Prophet", "LlamaIndex"
+    ],
+    "Backend & APIs": [
+      "Python", "FastAPI", "Flask", "RESTful APIs",
+      "Microservices", "Async Processing", "ETL Pipelines"
+    ],
+    "Databases": [
+      "PostgreSQL", "MongoDB", "Azure Cosmos DB", "Redis"
+    ],
+    "DevOps & Cloud": [
+      "Microsoft Azure", "Docker", "Kubernetes", "Git",
+      "CI/CD (Jenkins)", "Kafka", "Grafana"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Generative AI Developer",
+      "company": "KGISL",
+      "period": "October 2025 – Present",
+      "current": true,
+      "projects": [
+        {
+          "title": "AI-Driven Software Development & QA Automation Platform",
+          "highlights": [
+            "Orchestrated 97+ Claude Code skills to automate software development, testing, debugging, and deployment",
+            "Built self-healing AI agents with failure diagnosis, automated remediation, and resumable execution",
+            "Designed autonomous multi-agent workflows for Jira-driven development, code review, and release validation",
+            "Developed web dashboard for launching, monitoring, and controlling AI workflows with approval gates"
+          ],
+          "stack": ["Claude Code", "TypeScript", "Node.js", "Express.js", "Socket.io", "Electron", "PostgreSQL", "Docker", "Kubernetes", "Kafka", "Grafana"]
+        },
+        {
+          "title": "AI-Powered Conversational Platform for API Discovery & Market Intelligence",
+          "highlights": [
+            "Architected AI conversational interface using Gemini LLM for REST API interaction via natural language",
+            "Built production RAG system using Pinecone vector embeddings for semantic API endpoint discovery",
+            "Integrated real-time NIFTY 50 stock market intelligence with voice-driven interactions via FFmpeg"
+          ],
+          "stack": ["Python", "FastAPI", "Gemini", "Pinecone", "RAG", "Swagger/OpenAPI", "yfinance", "FFmpeg", "NLP"]
+        },
+        {
+          "title": "AI-Powered Financial Analytics & Portfolio Intelligence Platform",
+          "highlights": [
+            "Developed modular backend with portfolio management, market analysis, and AI-generated risk alerts",
+            "Implemented dual-mode SWOT news filter — fast keyword-based and LLM-powered semantic analysis",
+            "Built Options Strategy Builder with interactive payoff diagrams and REST APIs"
+          ],
+          "stack": ["Python", "FastAPI", "Flask", "Google Gemini", "PostgreSQL", "yfinance", "Batch Processing"]
+        }
+      ]
+    },
+    {
+      "role": "Generative AI Developer",
+      "company": "Yectra Technologies",
+      "period": "April 2024 – September 2025",
+      "current": false,
+      "projects": [
+        {
+          "title": "AI Analytics Platform — Conversational Data Interface (RAG Chatbot)",
+          "highlights": [
+            "Achieved 85% answer relevance across 200+ test queries using hybrid FAISS retrieval",
+            "Designed multi-turn conversation handling with LangChain supporting context across 5+ turns"
+          ],
+          "stack": ["Python", "FastAPI", "LangChain", "FAISS", "OpenAI GPT-4", "sentence-transformers"]
+        },
+        {
+          "title": "Natural Language to MongoDB Query Engine",
+          "highlights": [
+            "Reduced data team support tickets by 40+ per week by enabling NL-based data queries",
+            "Achieved 75% query accuracy through advanced prompt engineering and 500+ query validation tests"
+          ],
+          "stack": ["LangChain", "OpenAI API", "MongoDB", "Python", "JSON Schema Validation"]
+        },
+        {
+          "title": "Dynamic Visualization System (Multi-Agent Architecture)",
+          "highlights": [
+            "Built LangGraph multi-agent system for automatic chart generation from natural language",
+            "Improved user adoption by 60% and reduced custom chart dev time from 2 hours to 10 minutes"
+          ],
+          "stack": ["LangGraph", "OpenAI API", "Plotly", "Python", "Multi-Agent Systems"]
+        },
+        {
+          "title": "Domain-Specific Chatbot — ROOS (Cloud Kitchen Assistant)",
+          "highlights": [
+            "Fine-tuned open-source LLM using LoRA/QLoRA, reducing GPU training time from 6 to 3 hours",
+            "Deployed production chatbot handling 200+ daily queries with sub-2s response time"
+          ],
+          "stack": ["Hugging Face Transformers", "LoRA/QLoRA", "CUDA", "FastAPI", "Model Deployment"]
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "metric": "85%",
+      "description": "RAG answer relevance across 200+ production test queries",
+      "icon": "target"
+    },
+    {
+      "metric": "88%",
+      "description": "Forecasting accuracy using Facebook Prophet for business planning",
+      "icon": "chart"
+    },
+    {
+      "metric": "60%",
+      "description": "Improvement in user adoption via LangGraph multi-agent visualization",
+      "icon": "rocket"
+    },
+    {
+      "metric": "40+",
+      "description": "Support tickets/week eliminated with NL-to-MongoDB query engine",
+      "icon": "check"
+    }
+  ],
+  "education": {
+    "degree": "B.Tech in Information Technology",
+    "institution": "Dr. N.G.P Institute of Technology",
+    "period": "2020 – 2024",
+    "cgpa": "8.74"
+  }
+}
